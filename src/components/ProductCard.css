@@ -68,7 +68,7 @@
   }
   
   .card .imgbox img {
-    width: 100%;
+    width: 90%;
     transition: 1s;
     padding: 20px;
     border-radius: 30px;
@@ -87,7 +87,7 @@
     flex-direction: column;
   }
   
-  .card .content h4 {
+  .card .content h3 {
     color: #6e6863;
     font-size: 1.4em;
     letter-spacing: 1px;

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Slider, Button } from "@mui/material";
+import { Slider, Button, TextField } from "@mui/material";
 import "./PriceFilter.css";
 
 export const PriceFilter = ({ title, minPrice, maxPrice, onPriceChange }) => {
@@ -31,7 +31,7 @@ export const PriceFilter = ({ title, minPrice, maxPrice, onPriceChange }) => {
 
   const handleClear = () => {
     setMinInput(0);
-    setMaxInput(1000);
+    setMaxInput(0);
   };
 
   const handleSubmit = () => {
@@ -45,28 +45,29 @@ export const PriceFilter = ({ title, minPrice, maxPrice, onPriceChange }) => {
         <div className="price-filter-top">
           <div className="inputBox">
             <div className="minInput">
-          <input
-            type="number"
-            name="minPrice"
-            value={minInput || ""}
-            placeholder="Min"
-            onChange={handleInputChange}
-            onBlur={handleBlur}
-          />
-        </div>
-        <h5>to</h5>
-        <div className="maxInput">
-          <input
-            type="number"
-            name="maxPrice"
-            value={maxInput || ""}
-            placeholder="Max"
-            onChange={handleInputChange}
-            onBlur={handleBlur}
-          />
+              <TextField
+                type="number"
+                name="minPrice"
+                value={minInput || ""}
+                placeholder="Min"
+                onChange={handleInputChange}
+                onBlur={handleBlur}
+                inputProps={{ style: { width: "100px" } }}
+              />
+            </div>
+            <h5>to</h5>
+            <div className="maxInput">
+              <TextField
+                type="number"
+                name="maxPrice"
+                value={maxInput || ""}
+                placeholder="Max"
+                onChange={handleInputChange}
+                onBlur={handleBlur}
+                inputProps={{ style: { width: "100px" } }}
+              />
+            </div>
           </div>
-        
-        </div>
         </div>
         <Slider
           value={[minInput, maxInput]}
@@ -79,13 +80,12 @@ export const PriceFilter = ({ title, minPrice, maxPrice, onPriceChange }) => {
         />
         <div className="buttons">
           <Button variant="contained" onClick={handleSubmit}>
-          Go
-        </Button>
-        <Button variant="outlined" onClick={handleClear}>
-          Clear
-        </Button>
+            Go
+          </Button>
+          <Button variant="outlined" onClick={handleClear}>
+            Clear
+          </Button>
         </div>
-        
       </div>
     </div>
   );

@@ -9,7 +9,11 @@
   }
   
   .filter-title {
-    margin: 0 0 10px 0;
+    color: #6e6863;
+    font-size: 1.4em;
+    letter-spacing: 1px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 100;
   }
   
   .price-filter-controls {

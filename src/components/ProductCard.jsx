@@ -38,7 +38,6 @@ export const ProductCard = (data) => {
             <span>({data.data.reviewsCount})</span>
           </div>
         )}
-        <div></div>
       </div>
     </div>
   );
