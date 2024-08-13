@@ -1,0 +1,22 @@
+.filter-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  border-bottom: 1px solid #ccc;
+}
+
+.filter-body {
+  padding: 16px;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.product-filter-container {
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+

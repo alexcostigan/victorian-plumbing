@@ -1,0 +1,16 @@
+.navbar{
+    background-color: rgb(50, 170, 60);
+}
+
+.nav-link{
+    color: white;
+}
+
+.navbar-brand{
+    width: 25%;
+}
+
+.navbar-brand-img {
+    height: 40px;
+    cursor: pointer;
+  }
