@@ -2,8 +2,8 @@ interface FetchDataParams {
     setData: (data: any) => void;
     query: string;
     pageNumber: number;
-    size: number;
     sort: number;
+    size: number;
     facets: Record<string, any>;
     setFacets: (facets: any) => void;
     setTotalPages: (totalPages: number) => void;
@@ -28,7 +28,7 @@ interface FetchDataParams {
         body: JSON.stringify({
           query: query,
           pageNumber: pageNumber,
-          size: 30,
+          size: 24,
           additionalPages: 0,
           sort: sort,
           facets: facets,
